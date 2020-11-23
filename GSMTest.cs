@@ -29,13 +29,5 @@ namespace UppgiftTelefon
             
         }
 
-       
-
-
-
-         
-
-
-
     }
 }
