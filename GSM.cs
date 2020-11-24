@@ -38,7 +38,7 @@ namespace UppgiftTelefon
         Battery Battery1 = new Battery();
         Display Display1 = new Display();
 
-        internal string DisplayAllInfo()
+        public override string ToString()
         {
 
             StringBuilder sb = new StringBuilder();
