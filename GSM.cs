@@ -83,10 +83,10 @@ namespace UppgiftTelefon
         }
         List<Call> callhistory = new List<Call>
         {
-            new Call { StartTime = new DateTime(2020, 11, 20, 15, 58, 57), DialedPhoneNumber = 0702286984, TimespanSeconds = 2.5F },
-            new Call { StartTime = new DateTime(2020, 11, 21, 11, 38, 15), DialedPhoneNumber = 0702298745, TimespanSeconds = 7.3F },
-            new Call { StartTime = new DateTime(2020, 11, 22, 12, 03, 52), DialedPhoneNumber = 0703636547, TimespanSeconds = 9.2F },
-            new Call { StartTime = new DateTime(2020, 11, 23, 09, 18, 03), DialedPhoneNumber = 0785687456, TimespanSeconds = 4.7F },
+            new Call { StartTime = new DateTime(2020, 11, 20, 15, 58, 57), DialedPhoneNumber = 0702286984, TimespanSeconds = 300F },
+            new Call { StartTime = new DateTime(2020, 11, 21, 11, 38, 15), DialedPhoneNumber = 0702298745, TimespanSeconds = 350F },
+            new Call { StartTime = new DateTime(2020, 11, 22, 12, 03, 52), DialedPhoneNumber = 0703636547, TimespanSeconds = 2000F },
+            new Call { StartTime = new DateTime(2020, 11, 23, 09, 18, 03), DialedPhoneNumber = 0785687456, TimespanSeconds = 475F },
         };
 
 
@@ -187,7 +187,7 @@ namespace UppgiftTelefon
             int count = 0;
             foreach (var call in callhistory)
             {
-                float price = 0.37F * call.TimespanSeconds;
+                float price = 0.37F * call.TimespanSeconds/60;
                 count++;
                 Console.WriteLine($"Price for call number {count} = {price} kr : Duration in seconds {call.TimespanSeconds}");
                 totalPrice += price;
